@@ -4,25 +4,25 @@ import MealsItem from "./MealsItem/MealsItem";
 import Card from "../UI/Card";
 const DUMMY_MEALS = [
   {
-    Id: "m1",
+    id: "m1",
     name: "Chicken Biryani",
     description: "Roasted chicken with high Quality Rice",
     price: "400",
   },
   {
-    Id: "m2",
+    id: "m2",
     name: "Mutton Biryani",
     description: "Pahadi Bakra with desi masala",
     price: "1000",
   },
   {
-    Id: "m3",
+    id: "m3",
     name: "Mutton Mandi",
     description: "Roasted Mutton, with egg and Soup",
     price: "1600",
   },
   {
-    Id: "m4",
+    id: "m4",
     name: "Tangdi kabab",
     description: "12 pice Rosted  crunchy or jucy",
     price: "4000",
@@ -32,14 +32,15 @@ const DUMMY_MEALS = [
 const AvailabelMeals = () =>{
  const mealsList = DUMMY_MEALS.map((meal) => (
    <MealsItem
-     key={meal.Id}
+     key={meal.id}
+     id ={meal.id}
      name={meal.name}
      description={meal.description}
      price={meal.price}
    />
  ));
   
- return <section className={classes.meal}>
+ return <section className={classes.meals}>
    <Card>
      <ul>{mealsList}</ul>
    </Card>
