@@ -6,8 +6,12 @@ import CartContext from '../../Store/Cart-context';
 
 const Cart = props =>{
 
-  const addItemHandlar = (item) =>{};
-  const removeItemHandlar = (id) => {};
+  const addItemHandlar = (item) =>{
+    cartCtx.addItem({...item, amount :1})
+  };
+  const removeItemHandlar = (id) => {
+    cartCtx.removeItem(id)
+  };
 
    const cartCtx = useContext(CartContext);
    const totalAmount = `Rs ${cartCtx.totalAmount}`;
